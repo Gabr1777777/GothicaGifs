@@ -6,10 +6,10 @@
     <title>Gothica - Gifs</title>
     <style>
         :root {
-            --neon-blue: #e308b9; /* Alterado para Rosa/Magenta */
+            --neon-blue: #e330db; /* Cor padrão E330DB */
             --bg-dark: #050505;
             --card-bg: rgba(17, 17, 17, 0.5);
-            --deep-blue-bar: rgba(25, 0, 20, 0.5); /* Ajustado para tom rosado escuro */
+            --deep-blue-bar: rgba(25, 0, 20, 0.5); 
         }
 
         html, body {
@@ -75,7 +75,7 @@
 
         .copy-alert h3 {
             margin: 0 0 10px 0;
-            background: linear-gradient(-45deg, #ffffff, #e308b9, #ffffff, #e308b9);
+            background: linear-gradient(-45deg, #ffffff, var(--neon-blue), #ffffff, var(--neon-blue));
             background-size: 300%;
             -webkit-background-clip: text;
             background-clip: text;
@@ -139,8 +139,8 @@
 
         .btn-entrar, .btn-xat {
             font-weight: bold; color: white; text-transform: uppercase; border: none; border-radius: 50px; cursor: pointer;
-            background: linear-gradient(-45deg, #ffffff, #e308b9, #ffffff, #e308b9);
-            background-size: 300%; animation: moveGradient 4s linear infinite; box-shadow: 0 0 20px rgba(227, 8, 185, 0.4); transition: 0.3s; margin: 5px;
+            background: linear-gradient(-45deg, #ffffff, var(--neon-blue), #ffffff, var(--neon-blue));
+            background-size: 300%; animation: moveGradient 4s linear infinite; box-shadow: 0 0 20px rgba(227, 48, 219, 0.4); transition: 0.3s; margin: 5px;
         }
 
         .btn-entrar { padding: 15px 60px; font-size: 20px; }
@@ -164,11 +164,11 @@
 
         .perfil-header { text-align: center; padding: 20px; border-bottom: 2px solid var(--neon-blue); background: rgba(5, 5, 5, 0.5); z-index: 10; flex-shrink: 0; }
         .perfil-header h1 {
-            font-size: 2.5rem; margin: 0; background: linear-gradient(-45deg, #ffffff, #e308b9, #ffffff, #e308b9);
+            font-size: 2.5rem; margin: 0; background: linear-gradient(-45deg, #ffffff, var(--neon-blue), #ffffff, var(--neon-blue));
             background-size: 300%; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: moveGradient 4s linear infinite;
         }
 
-        .perfil-header p { font-weight: bold; text-transform: uppercase; background: linear-gradient(-45deg, #ffffff, #e308b9, #ffffff, #e308b9); background-size: 300%; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: moveGradient 5s linear infinite; }
+        .perfil-header p { font-weight: bold; text-transform: uppercase; background: linear-gradient(-45deg, #ffffff, var(--neon-blue), #ffffff, var(--neon-blue)); background-size: 300%; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: moveGradient 5s linear infinite; }
 
         .main-wrapper { display: flex; flex: 1; overflow: hidden; position: relative; }
 
@@ -180,12 +180,12 @@
         .nav-hidden .nav-container { transform: translateX(-100%); position: absolute; }
 
         .nav-btn {
-            background: var(--deep-blue-bar); border: 1px solid rgba(227, 8, 185, 0.3); padding: 12px; cursor: pointer;
+            background: var(--deep-blue-bar); border: 1px solid rgba(227, 48, 219, 0.3); padding: 12px; cursor: pointer;
             font-weight: bold; text-transform: uppercase; font-size: 15px; transition: all 0.3s ease; color: white; text-align: left; display: block; flex-shrink: 0;
         }
 
-        .nav-btn:hover, .nav-btn.active { border-color: var(--neon-blue); box-shadow: 0 0 20px var(--neon-blue); background: rgba(227, 8, 185, 0.1); transform: translateX(8px); }
-        .nav-btn span { background: linear-gradient(to right, #ffffff, #e308b9, #ffffff, #e308b9); background-size: 200% auto; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: moveGradient 3s linear infinite; }
+        .nav-btn:hover, .nav-btn.active { border-color: var(--neon-blue); box-shadow: 0 0 20px var(--neon-blue); background: rgba(227, 48, 219, 0.1); transform: translateX(8px); }
+        .nav-btn span { background: linear-gradient(to right, #ffffff, var(--neon-blue), #ffffff, var(--neon-blue)); background-size: 200% auto; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: moveGradient 3s linear infinite; }
 
         .content-area { flex: 1; padding: 30px; overflow-y: auto; overflow-x: hidden; z-index: 15; position: relative; transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); -webkit-overflow-scrolling: touch; touch-action: pan-y; }
 
@@ -198,7 +198,7 @@
         .grid-container { display: grid; gap: 20px; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
         .grid-gifs { display: grid; gap: 20px; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); }
         
-        .card { background: var(--card-bg); border: 1px solid rgba(227, 8, 185, 0.2); border-radius: 4px; overflow: hidden; text-align: center; cursor: zoom-in; transition: 0.3s; }
+        .card { background: var(--card-bg); border: 1px solid rgba(227, 48, 219, 0.2); border-radius: 4px; overflow: hidden; text-align: center; cursor: zoom-in; transition: 0.3s; }
         .card:hover { border-color: var(--neon-blue); transform: scale(1.05); box-shadow: 0 0 25px var(--neon-blue); background: rgba(17, 17, 17, 0.8); }
         .card img { width: 100%; display: block; }
         .card .label { padding: 8px 5px; font-size: 11px; background: rgba(10, 10, 10, 0.6); text-transform: uppercase; font-weight: bold; }
@@ -209,27 +209,27 @@
             .info-card.full-width { grid-column: 1; }
         }
 
-        .info-card { background: var(--card-bg); border: 1px solid rgba(227, 8, 185, 0.2); padding: 20px; border-radius: 4px; transition: all 0.3s ease; word-wrap: break-word; }
+        .info-card { background: var(--card-bg); border: 1px solid rgba(227, 48, 219, 0.2); padding: 20px; border-radius: 4px; transition: all 0.3s ease; word-wrap: break-word; }
         .info-card:hover { border-color: var(--neon-blue); box-shadow: 0 0 20px var(--neon-blue); transform: scale(1.01); background: rgba(17, 17, 17, 0.7); }
         .info-card.full-width { grid-column: 1 / span 2; }
-        .info-card h3 { margin-top: 0; text-transform: uppercase; background: linear-gradient(-45deg, #ffffff, #e308b9, #ffffff, #e308b9); background-size: 300%; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: moveGradient 4s linear infinite; }
+        .info-card h3 { margin-top: 0; text-transform: uppercase; background: linear-gradient(-45deg, #ffffff, var(--neon-blue), #ffffff, var(--neon-blue)); background-size: 300%; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: moveGradient 4s linear infinite; }
 
-        .marquee-container { background: var(--deep-blue-bar); border: 1px solid rgba(227, 8, 185, 0.2); width: 100%; overflow: hidden; margin-bottom: 20px; padding: 15px 0; position: relative; display: flex; align-items: center; }
-        .marquee-content { display: inline-block; white-space: nowrap; position: absolute; will-change: transform; animation: linear-scroll-inside 15s linear infinite; }
-        .texto-animado { font-weight: bold; font-size: 22px; background: linear-gradient(to right, #ffffff, #e308b9, #ffffff, #e308b9); background-size: 200% auto; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: moveGradient 3s linear infinite; padding: 0 10px; }
+        .marquee-container { background: var(--deep-blue-bar); border: 1px solid rgba(227, 48, 219, 0.2); width: 100%; overflow: hidden; margin-bottom: 20px; padding: 15px 0; position: relative; display: flex; align-items: center; }
+        .marquee-content { display: inline-block; white-space: nowrap; position: absolute; transform: translateX(100%); will-change: transform; animation: linear-scroll-inside 15s linear infinite; }
+        .texto-animado { font-weight: bold; font-size: 22px; background: linear-gradient(to right, #ffffff, var(--neon-blue), #ffffff, var(--neon-blue)); background-size: 200% auto; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: moveGradient 3s linear infinite; padding: 0 10px; }
 
         @keyframes linear-scroll-inside { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
         @keyframes moveGradient { 0% { background-position: 0% center; } 100% { background-position: 200% center; } }
 
         .player-container { max-width: 400px; margin: 20px auto; background: var(--card-bg); border: 2px solid var(--neon-blue); border-radius: 8px; padding: 20px; box-shadow: 0 0 20px var(--neon-blue); text-align: center; position: relative; z-index: 10; }
         .track-marquee { width: 100%; overflow: hidden; white-space: nowrap; background: rgba(0, 0, 0, 0.3); padding: 10px 0; margin-bottom: 20px; position: relative; height: 30px; display: flex; align-items: center; }
-        .track-name, .vol-label { display: inline-block; font-weight: bold; text-transform: uppercase; background: linear-gradient(to right, #ffffff, #e308b9, #ffffff, #e308b9); background-size: 200% auto; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: moveGradient 3s linear infinite; }
+        .track-name, .vol-label { display: inline-block; font-weight: bold; text-transform: uppercase; background: linear-gradient(to right, #ffffff, var(--neon-blue), #ffffff, var(--neon-blue)); background-size: 200% auto; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: moveGradient 3s linear infinite; }
         .track-name { position: absolute; will-change: transform; animation: linear-scroll-inside 20s linear infinite, moveGradient 3s linear infinite; }
 
         .modal { display: none; position: fixed; z-index: 1000; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.95); justify-content: center; align-items: center; }
         .modal-content { max-width: 80%; max-height: 80%; border: 2px solid var(--neon-blue); }
 
-        .exclusive-footer { margin-top: auto; padding-top: 15px; text-align: center; font-size: 9px; font-weight: bold; text-transform: uppercase; background: linear-gradient(to right, #ffffff, #e308b9, #ffffff, #e308b9); background-size: 200% auto; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: moveGradient 3s linear infinite; }
+        .exclusive-footer { margin-top: auto; padding-top: 15px; text-align: center; font-size: 9px; font-weight: bold; text-transform: uppercase; background: linear-gradient(to right, #ffffff, var(--neon-blue), #ffffff, var(--neon-blue)); background-size: 200% auto; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: moveGradient 3s linear infinite; }
     </style>
 </head>
 <body oncontextmenu="showAlert(); return false;">
@@ -310,7 +310,7 @@
                 <div class="info-cards">
                     <div class="info-card"><h3>Sobre mí</h3><p>TEXTO AQUI</p></div>
                     <div class="info-card"><h3>Consejos</h3><p>TEXTO AQUI</p></div>
-                 <div class="info-card full-width"><h3>Sell ID</h3><p id="ids-venda">TEXTO AQUI</p></div>
+                    <div class="info-card full-width"><h3>Sell ID</h3><p id="ids-venda">TEXTO AQUI</p></div>
                 </div>
             </div>
 
@@ -320,8 +320,7 @@
             <div id="pcback-est" class="section"></div>
             <div id="pstyle-est" class="section"></div>
             <div id="fundos" class="section"></div>
-
-            <div id="player" class="section">
+            <div id="firma" class="section"></div> <div id="player" class="section">
                 <div class="player-container">
                     <div class="track-marquee"><span id="trackName" class="track-name">Selecciona una música...</span></div>
                     <div style="display:flex; justify-content:center; align-items:center; gap:10px;">
@@ -388,9 +387,14 @@
                 target.scrollTop = 0; 
                 document.querySelector('.content-area').scrollTop = 0;
             }
-            if(window.event && window.event.currentTarget.tagName === 'BUTTON') {
-                window.event.currentTarget.classList.add('active');
-            }
+            // Encontra o botão que possui o onclick correspondente e ativa ele
+            const btns = document.querySelectorAll('.nav-btn');
+            btns.forEach(btn => {
+                if(btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${id}'`)) {
+                    btn.classList.add('active');
+                }
+            });
+
             if (window.innerWidth <= 768) { document.getElementById('mainWrapper').classList.add('nav-hidden'); }
         }
 
@@ -401,7 +405,11 @@
         function prevTrack() { currentTrack=(currentTrack-1+playlist.length)%playlist.length; loadTrack(currentTrack); audio.play(); document.getElementById('playBtn').innerText='||'; }
         audio.onended = nextTrack;
 
-        function openZoom(src) { document.getElementById("imgZoom").src = src; document.getElementById("modalZoom").style.display = "flex"; }
+        function openZoom(src) { 
+            if(src.includes('enlace')) return;
+            document.getElementById("imgZoom").src = src; 
+            document.getElementById("modalZoom").style.display = "flex"; 
+        }
         function closeZoom() { document.getElementById("modalZoom").style.display = "none"; }
 
         function render() {
@@ -478,14 +486,17 @@
             gifSec.innerHTML = "";
             dataGifs.forEach(sec => {
                 let h = `<div class="marquee-container"><div class="marquee-content"><span class="texto-animado">${sec.marquee}</span></div></div><div class="grid-gifs">`;
-                sec.ids.forEach((id, i) => { h += `<div class="card" onclick="openZoom('https://i.imgur.com/${id}.gif')"><img src="https://i.imgur.com/${id}.gif"><div class="label">${sec.prefix}${i+1}</div></div>`; });
+                sec.ids.forEach((id, i) => { 
+                    let link = id.includes('enlace') ? '#' : `https://i.imgur.com/${id}`;
+                    h += `<div class="card" onclick="openZoom('${link}')"><img src="${link}"><div class="label">${sec.prefix}${i+1}</div></div>`; 
+                });
                 h += `</div>`; gifSec.innerHTML += h;
             });
 
             const configs = [
                 { id: 'pcback-gif', marquee: "✧ PCBACK GIF - 450 XATS ✧", label: "PCBack Gif", 
                     urls: [
-                        'OKE4VaB.gif', 'KKY2zqU', 'KKY2zqU', 'enlace aquí', 'enlace aquí', 'enlace aquí', 'enlace aquí', 'enlace aquí', 'enlace aquí', 'enlace aquí',
+                        'OKE4VaB.gif', 'KKY2zqU.gif', 'KKY2zqU.gif', 'enlace aquí', 'enlace aquí', 'enlace aquí', 'enlace aquí', 'enlace aquí', 'enlace aquí', 'enlace aquí',
                         'enlace aquí', 'enlace aquí', 'enlace aquí', 'enlace aquí', 'enlace aquí', 'enlace aquí', 'enlace aquí', 'enlace aquí', 'enlace aquí', 'enlace aquí',
                         'enlace aqui', 'enlace aqui',
                     ] 
@@ -515,8 +526,8 @@
                         'enlace aquí', 'enlace aquí', 'enlace aquí', 'enlace aquí', 'enlace aquí', 'enlace aquí', 'enlace aquí', 'enlace aquí', 'enlace aquí', 'enlace aquí',
                         'enlace aqui', 
                     ] 
-                  },
-                { id: 'firma', marquee: "✧ FIRMAS/LOGOS - 500 XATS ✧", label: "firma", 
+                },
+                { id: 'firma', marquee: "✧ FIRMAS/LOGOS - 500 XATS ✧", label: "Firma", 
                     urls: [
                         'hqxUYUr.png', 'enlace aquí', 'enlace aquí', 'enlace aquí', 'enlace aquí', 'enlace aquí', 'enlace aquí', 'enlace aquí', 'enlace aquí', 'enlace aquí',
                         'enlace aquí', 'enlace aquí', 'enlace aquí', 'enlace aquí', 'enlace aquí', 'enlace aquí', 'enlace aquí', 'enlace aquí', 'enlace aquí', 'enlace aquí',
@@ -530,8 +541,9 @@
                 if (target) {
                     let html = `<div class="marquee-container"><div class="marquee-content"><span class="texto-animado">${c.marquee}</span></div></div><div class="grid-container">`;
                     c.urls.forEach((img, i) => {
-                        html += `<div class="card" onclick="openZoom('https://i.imgur.com/${img}')">
-                                 <img src="https://i.imgur.com/${img}"><div class="label">${c.label} - ${i+1}</div></div>`;
+                        let fullLink = img.includes('enlace') ? '#' : `https://i.imgur.com/${img}`;
+                        html += `<div class="card" onclick="openZoom('${fullLink}')">
+                                 <img src="${fullLink}"><div class="label">${c.label} - ${i+1}</div></div>`;
                     });
                     target.innerHTML = html + `</div>`;
                 }
